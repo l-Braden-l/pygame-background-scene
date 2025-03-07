@@ -20,8 +20,8 @@ def handle_events ():
     return True
 
 
-
-
+def draw_rect(screen, color, rect, thickness): 
+   pygame.draw.rect(screen, color , rect, thickness)
 
 
 
@@ -36,9 +36,39 @@ def main():
 
 
    #---------------shapes-------------------#
-      pygame.draw.rect(screen, (150, 75, 0), [60, 400 ,30, 45])
-      pygame.draw.polygon(screen, config.GREEN,[[150,400], [75, 250], [0, 400]])
-      pygame.draw.polygon(screen, config.GREEN,[[140,350], [75, 230], [10, 350]])
+      # --- Stars --- #
+
+
+
+
+      # --- City --- #
+      rect = [0, 115 ,90, 275]
+      draw_rect(screen, (50,50,50), rect,0)
+      pygame.draw.rect(screen, (50, 50, 50), [95, 135 ,90, 255])
+      pygame.draw.rect(screen, (50, 50, 50), [190, 155 ,90, 235])
+      pygame.draw.rect(screen, (50, 50, 50), [285, 85 ,90, 305])
+      pygame.draw.rect(screen, (50, 50, 50), [380, 45 ,90, 345])
+      pygame.draw.rect(screen, (50, 50, 50), [475, 135 ,90, 255])
+      pygame.draw.rect(screen, (50, 50, 50), [570, 105 ,90, 285])
+      pygame.draw.rect(screen, (50, 50, 50), [665, 235 ,90, 155])
+      pygame.draw.rect(screen, (50, 50, 50), [760, 135 ,90, 255])
+      #--- water ---#
+      my_rect1 = [-100, 390, 9500, 350]
+      border_radius = 50
+      thickness_r = 0
+      pygame.draw.rect(screen, config.BLUE, my_rect1, thickness_r, border_radius)
+
+      # --- Grass --- #
+      circle_center = (400, 900)
+      circle_radius = 500
+      circle_color = config.BLACK
+      circle_thick = 0
+      pygame.draw.circle(screen, config.GREEN, circle_center, circle_radius, circle_thick )
+
+      #--- Tree ---#
+      pygame.draw.rect(screen, (150, 75, 0), [500, 400 ,30, 45])
+      pygame.draw.polygon(screen, config.GREEN,[[590,400], [515, 250], [440, 400]])
+      pygame.draw.polygon(screen, config.GREEN,[[590,350], [515, 230], [440, 350]])
    #----------------------------------------#
       
 
