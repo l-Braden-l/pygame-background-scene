@@ -36,7 +36,7 @@ def main():
 
 
    #---------------shapes-------------------#
-      pygame.draw.rect(screen, config.BROWN, [60, 400 ,30, 45])
+      pygame.draw.rect(screen, (150, 75, 0), [60, 400 ,30, 45])
       pygame.draw.polygon(screen, config.GREEN,[[150,400], [75, 250], [0, 400]])
       pygame.draw.polygon(screen, config.GREEN,[[140,350], [75, 230], [10, 350]])
    #----------------------------------------#
