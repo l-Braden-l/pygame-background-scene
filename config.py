@@ -5,11 +5,8 @@ BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
-<<<<<<< HEAD
-BROWN = (150,75,0)
-=======
 BROWN = (150, 75, 0)
->>>>>>> b68bb0b6e3781f1927b6aa9e261bb12e8a0099b9
+
 # Game window dimensions
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
