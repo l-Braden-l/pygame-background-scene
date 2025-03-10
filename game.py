@@ -44,14 +44,23 @@ def main():
       # --- City --- #
       rect = [0, 115 ,90, 275]
       draw_rect(screen, (50,50,50), rect,0)
-      pygame.draw.rect(screen, (50, 50, 50), [95, 135 ,90, 255])
-      pygame.draw.rect(screen, (50, 50, 50), [190, 155 ,90, 235])
-      pygame.draw.rect(screen, (50, 50, 50), [285, 85 ,90, 305])
-      pygame.draw.rect(screen, (50, 50, 50), [380, 45 ,90, 345])
-      pygame.draw.rect(screen, (50, 50, 50), [475, 135 ,90, 255])
-      pygame.draw.rect(screen, (50, 50, 50), [570, 105 ,90, 285])
-      pygame.draw.rect(screen, (50, 50, 50), [665, 235 ,90, 155])
-      pygame.draw.rect(screen, (50, 50, 50), [760, 135 ,90, 255])
+      rect = [95, 135 ,90, 255]
+      draw_rect(screen, (50,50,50), rect,0)
+      rect = [190, 155 ,90, 235]
+      draw_rect(screen, (50,50,50), rect,0)
+      rect = [285, 85 ,90, 305]
+      draw_rect(screen, (50,50,50), rect,0)
+      rect = [380, 45 ,90, 345]
+      draw_rect(screen, (50,50,50), rect,0)
+      rect = [475, 135 ,90, 255]
+      draw_rect(screen, (50,50,50), rect,0)
+      rect = [570, 105 ,90, 285]
+      draw_rect(screen, (50,50,50), rect,0)
+      rect = [665, 235 ,90, 155]
+      draw_rect(screen, (50,50,50), rect,0)
+      rect = [760, 135 ,90, 255]
+      draw_rect(screen, (50,50,50), rect,0)
+
       #--- water ---#
       my_rect1 = [-100, 390, 9500, 350]
       border_radius = 50
