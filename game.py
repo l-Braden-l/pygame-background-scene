@@ -18,28 +18,43 @@ def handle_events ():
           if event.key == pygame.K_ESCAPE:
              return False
     return True
-
-
+#----- Functions -----#
+# -- Draw rectangle --#
 def draw_rect(screen, color, rect, thickness): 
    pygame.draw.rect(screen, color , rect, thickness)
 
-
+#----Draw Text ----#
+def draw_text(screen, text, font, text_col, x, y):
+   
+   img = font.render(text, True, text_col)
+   screen.blit(img, (x, y))
 
 
 def main():
    screen = init_game()
    clock = pygame.time.Clock() # Initialize the clock here
+   txt_font1 = pygame.font.SysFont("Ariel", 25)
+
    running = True
    while running:
       running = handle_events()
       screen.fill(config.BLACK) # Use color from config
 
-
-   #---------------shapes-------------------#
+   #----- shapes -----#
       # --- Stars --- #
-
-
-
+      for offset in range(0,800,40):
+         rect = [30+offset, 155, 5, 5]
+         pygame.draw.rect(screen, config.WHITE, rect, 0)
+         rect = [10+offset, 125, 5, 5]
+         pygame.draw.rect(screen, config.WHITE, rect, 0)
+         rect = [30+offset, 95, 5, 5]
+         pygame.draw.rect(screen, config.WHITE, rect, 0)
+         rect = [10+offset, 65, 5, 5]
+         pygame.draw.rect(screen, config.WHITE, rect, 0)
+         rect = [30+offset, 35, 5, 5]
+         pygame.draw.rect(screen, config.WHITE, rect, 0)
+         rect = [10+offset, 5, 5, 5]
+         pygame.draw.rect(screen, config.WHITE, rect, 0)
 
       # --- City --- #
       rect = [0, 115 ,90, 275]
@@ -67,6 +82,9 @@ def main():
       thickness_r = 0
       pygame.draw.rect(screen, config.BLUE, my_rect1, thickness_r, border_radius)
 
+      #--- land ---#
+      rect = [0, 379 ,900, 15]
+      draw_rect(screen, (20, 95, 20), rect,0)
       # --- Grass --- #
       circle_center = (400, 900)
       circle_radius = 500
@@ -78,10 +96,16 @@ def main():
       pygame.draw.rect(screen, (150, 75, 0), [500, 400 ,30, 45])
       pygame.draw.polygon(screen, config.GREEN,[[590,400], [515, 250], [440, 400]])
       pygame.draw.polygon(screen, config.GREEN,[[590,350], [515, 230], [440, 350]])
-   #----------------------------------------#
-      
 
+      #--- Sign ---#
+      rect = [197, 345 ,195, 100]
+      draw_rect(screen, (170, 95, 20), rect,0)
+      rect = [280, 345 ,30, 150]
+      draw_rect(screen, (170, 95, 20), rect,0)
 
+      #--- Text ---#
+      draw_text(screen, "Braden Leach, Buckley", txt_font1, (180,180,180), 200, 390)
+   #----------------------------------------------------------------------------------------------------------------#
       pygame.display.flip()
 
       # -- Limit the frame rate to the specified frames per second (FPS) -- #
