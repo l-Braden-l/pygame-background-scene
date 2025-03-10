@@ -3,6 +3,7 @@
 import pygame
 import sys
 import config # Import the config module 
+import random
 def init_game (): 
     pygame.init()
     screen = pygame.display.set_mode((config.WINDOW_WIDTH, config.WINDOW_HEIGHT)) # Use constants from config
@@ -76,6 +77,15 @@ def main():
       rect = [760, 135 ,90, 255]
       draw_rect(screen, (50,50,50), rect,0)
 
+      #--- lights ---#
+      lighton = random.randint(1,2)
+      if lighton == True:
+         rect1 = [60, 135 ,20, 20]
+         lighton = draw_rect(screen, (236,183,83), rect1,0)
+      else:
+         rect1 = [60, 135 ,20, 20]
+         lighton = draw_rect(screen, (10,10,10), rect1,0)
+
       #--- water ---#
       my_rect1 = [-100, 390, 9500, 350]
       border_radius = 50
@@ -85,6 +95,7 @@ def main():
       #--- land ---#
       rect = [0, 379 ,900, 15]
       draw_rect(screen, (20, 95, 20), rect,0)
+
       # --- Grass --- #
       circle_center = (400, 900)
       circle_radius = 500
@@ -109,7 +120,7 @@ def main():
       pygame.display.flip()
 
       # -- Limit the frame rate to the specified frames per second (FPS) -- #
-      clock.tick(config.FPS) # Use the clock to control the frame rate
+      clock.tick(10) # Use the clock to control the frame rate
 
    pygame.quit()
    sys.exit()
